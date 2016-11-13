@@ -1,4 +1,8 @@
 language: java
 jdk:
   - openjdk7
+node_js: "6"
+install:
+  - npm install -g bower
+  - sudo apt-get install rpm
 script: "xvfb-run -a mvn clean install"
