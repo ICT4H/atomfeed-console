@@ -6,7 +6,7 @@
   "repository": "https://github.com/ICT4H/atomfeed-console",
   "license": "MIT",
   "devDependencies": {
-    "karma": "^0.12.16",
+    "karma": "^0.13.00",
     "karma-firefox-launcher": "1.0.0",
     "karma-jasmine": "~0.1.0",
     "protractor": "^2.1.0",
