@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.List;
+
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.*;
@@ -25,9 +27,9 @@ public class AppStatusControllerTest {
     @Value("${../../resources/application.yml}")
     @Test
     public void shouldRetrieveConfig() {
-        AppConfigs appDetails = appController.getAppDetails();
+        List<String> appDetails = appController.getAppDetails();
         assertThat(appDetails.size(), is((equalTo(1))));
-        AppConfig appConfig = appDetails.get(0);
-        assertThat(appConfig.getAppName(), is(equalTo("testApp")));
+        String appConfig = appDetails.get(0);
+        assertThat(appConfig, is(equalTo("testApp")));
     }
 }
