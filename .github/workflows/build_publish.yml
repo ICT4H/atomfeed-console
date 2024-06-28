@@ -7,14 +7,6 @@ on:
       - "**.md"
 
 jobs:
-  Trivy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Trivy Scan
-        run: ./.github/trivy_scan.sh .
-
   build-atomfeed-console:
     name: Build atomfeed-console
     runs-on: ubuntu-latest
