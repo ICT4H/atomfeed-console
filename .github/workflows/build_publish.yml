@@ -1,0 +1,29 @@
+name: Build & Publish atomfeed-console
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - "**.md"
+
+jobs:
+  build-atomfeed-console:
+    name: Build atomfeed-console
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Java 8
+        uses: actions/setup-java@v4
+        with:
+          distribution: "zulu"
+          java-version: "8"
+      # - name: Run Unit Tests
+      #   run: mvn --no-transfer-progress clean test
+      - name: Install bower
+        run: npm install -g bower 
+      - name: Package
+        run: mvn --no-transfer-progress clean package -DskipTests
+      - uses: actions/upload-artifact@v4
+        with:
+          name: atomfeed-console-SNAPSHOT.jar
+          path: target/*.jar

@@ -1,7 +1,7 @@
 Atomfeed Console
 ================
 
-[![Build Status](https://travis-ci.org/ICT4H/atomfeed-console.png)](https://travis-ci.org/ICT4H/atomfeed-console)
+![Build Status](https://github.com/ICT4H/atomfeed-console/actions/workflows/build_upload.yml/badge.svg)
 
 Build
 =====
