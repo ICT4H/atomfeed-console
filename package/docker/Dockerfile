@@ -1,4 +1,4 @@
-FROM amazoncorretto:8
+FROM amazoncorretto:17
 COPY package/docker/resources/application.yml.template .
 COPY package/docker/resources/start.sh .
 COPY package/docker/resources/*.jar .
