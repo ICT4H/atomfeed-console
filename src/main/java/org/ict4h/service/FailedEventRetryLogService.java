@@ -1,10 +1,11 @@
 package org.ict4h.service;
 
-import org.apache.log4j.Logger;
 import org.ict4h.atomfeed.client.domain.FailedEventRetryLog;
 import org.ict4h.atomfeed.client.repository.AllFailedEvents;
 import org.ict4h.atomfeed.client.repository.jdbc.AllFailedEventsJdbcImpl;
 import org.ict4h.domain.configuration.AppConfig;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Component
 public class FailedEventRetryLogService {
-    private static Logger logger = Logger.getLogger(FailedEventRetryLogService.class);
+    private static Logger logger = LoggerFactory.getLogger(FailedEventRetryLogService.class);
     @Autowired
     private AppStatusService appStatusService;
 

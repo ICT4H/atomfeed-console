@@ -1,6 +1,7 @@
 server:
   port: 9080
-  contextPath: /atomfeed-console
+  servlet:
+    context-path: /atomfeed-console
 appConfigs:
 -
    appName: OpenMRS

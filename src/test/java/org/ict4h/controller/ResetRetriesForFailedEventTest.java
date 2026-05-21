@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.sql.SQLException;
@@ -18,7 +18,7 @@ import static org.ict4h.util.Database.*;
 import static org.junit.Assert.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(AtomfeedConsoleApplication.class)
+@SpringBootTest(classes = AtomfeedConsoleApplication.class)
 public class ResetRetriesForFailedEventTest extends BaseTest {
 
     private int failedEventId = 1;

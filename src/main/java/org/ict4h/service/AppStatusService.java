@@ -1,6 +1,5 @@
 package org.ict4h.service;
 
-import org.apache.log4j.Logger;
 import org.ict4h.atomfeed.client.domain.Marker;
 import org.ict4h.atomfeed.client.repository.AllFailedEvents;
 import org.ict4h.atomfeed.client.repository.AllMarkers;
@@ -11,6 +10,8 @@ import org.ict4h.domain.configuration.AppConfig;
 import org.ict4h.domain.Feeds;
 import org.ict4h.domain.Feed;
 import org.ict4h.jdbc.ConnectionPools;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -21,7 +22,7 @@ import java.util.List;
 
 @Component
 public class AppStatusService {
-    private static Logger logger = Logger.getLogger(AppStatusService.class);
+    private static Logger logger = LoggerFactory.getLogger(AppStatusService.class);
     ConnectionPools connectionPools;
 
     @Autowired

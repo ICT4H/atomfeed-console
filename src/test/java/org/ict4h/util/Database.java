@@ -14,7 +14,7 @@ public class Database {
     }
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:h2:mem:test;DB_CLOSE_DELAY=-1", "", "");
+        return DriverManager.getConnection("jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;MODE=MySQL", "", "");
     }
 
     private static final String CREATE_MARKERS_TABLE = "CREATE TABLE markers (\n" +
